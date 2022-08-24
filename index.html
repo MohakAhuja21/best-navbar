@@ -6,63 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
     <link rel="stylesheet" href="style.css">
-    <!--  -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- BOX-ICON CDN -->
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-   <!-- navbar -->
-   <div class="nav-container" id="nav-container">
-    <div class="desktop-nav">
-        <div class="left-nav">
-            <ul class="list-items">
-                <li class="item"><a href="#">home</a></li>
-                <li class="item"><a href="#">about</a></li>
-                <li class="item"><a href="#">services</a></li>
-                <li class="item"><a href="#">contact</a></li>
-            </ul>
-        </div>
+    <div class="navbar" id="navbar">
+        <ul class="left-nav">
+            <li class="item"><a href="#">home</a></li>
+            <li class="item"><a href="#">about</a></li>
+            <li class="item"><a href="#">services</a></li>
+            <li class="item"><a href="#">contact</a></li>
+        </ul>
         <div class="right-nav">
+            <!--  -->
             <div class="switch">
                 <div class="flicker"></div>
             </div>
-            <input type="text" id="search" placeholder="search website">
+            <input type="text" id="search"placeholder="search website">
             <button class="login-btn">login</button>
         </div>
     </div>
-   </div>
-               <!-- login popup -->
-               <div class="login-form">
-                <div class="form">
-                    <i class='bx bx-x'></i>
-                    <div class="form-element">
-                        <label>email</label>
-                        <input type="email" id="email" placeholder="@">
-                    </div>
-                    <div class="form-element">
-                        <label>password</label>
-                        <input type="password" id="pass">
-                    </div>
-                    <div class="form-element">
-                        <button>login</button>
-                    </div>
-                    <div class="form-element">
-                        <a href="#">forget password ?</a>
-                    </div>
-                </div>
+    <!-- login-popup form -->
+    <div class="login-popup">
+        <div class="login-form">
+            <i class='bx bx-x'></i>
+            <div class="login-form-elements">
+                <label>email</label>
+                <input type="email" id="email" placeholder="@">
             </div>
-            <!-- search popup -->
-            <div class="search-form">
-                <i class='bx bx-x'></i>
-                <h2>quick links</h2>
-            <div class="search-items">
-                <p>code snippet</p>
-                <p>email me</p>
-                <p>work together</p>
-                <p>suggest changes to website</p>
+            <div class="login-form-elements">
+                <label>password</label>
+                <input type="password" id="pass">
             </div>
+            <div class="login-form-elements">
+                <button class="login-btn">login</button>
             </div>
-   <!-- opacity -->
-   <div class="opacity"></div>
+            <div class="login-form-elements">
+                <a href="#">forget password ?</a>
+            </div>
+        </div>
+    </div>
+    <!-- overlay -->
+    <div class="overlay"></div>
 </body>
 <script src="index.js"></script>
 </html>

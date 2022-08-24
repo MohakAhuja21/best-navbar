@@ -1,206 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 *{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.navbar{
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    padding: 10px 0px;
+}
+.left-nav, .right-nav{
+    display: flex;
+    align-items: center;
 }
 .item{
     list-style-type: none;
     margin-inline: 20px;
 }
 .item a{
-    opacity: 0.85;
+    opacity: 0.8;
     color: white;
-    font-size: 20px;
     text-decoration: none;
 }
 .item a:hover{
     opacity: 1;
 }
-.desktop-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.list-items{
-    display: flex;
-    align-items: center;
-}
-.nav-container{
-    z-index: 100;
-    background: rgba(0,0,0,0.8);
-    position: fixed;
-    width: 100%;
-}
-.desktop-nav{
-    padding: 7px;
-}
 #search{
     margin-inline: 15px;
-    background: transparent;
     border: none;
-    border-bottom: 1.4px solid gray;
-    width: 180px;
-    height: 30px;
     outline: none;
-    transition: 0.4s;
-    caret-color: gray;
-    color: whitesmoke;    
+    background: transparent;
+    border-bottom: 1px solid gray;
+    height: 25px;
+    width: 180px;
+    caret-color: whitesmoke;
+    color: whitesmoke;
+    transition: all 350ms;
 }
 #search:focus{
-    border-bottom: 1.4px solid rgb(39, 136, 255);
-    width: 220px;
+    width: 200px;
+    border-bottom: 1px solid rgb(74, 74, 253);
 }
 .login-btn{
-    outline: none;
     border: none;
+    outline: none;
     border-radius: 5px;
-    padding: 6px;
+    background:rgb(74, 74, 253);
     color: white;
-    background: rgb(39, 136, 255);
+    padding: 6px;
     width: 50px;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: 0.35s;
 }
 .login-btn:active{
-    transform: scale(0.85);
+    transform: scale(0.9);
 }
 .switch{
-    position: relative;
     width: 65px;
     height: 35px;
-    background: rgba(39, 136, 255, 0.769);
-    border-radius: 50px;
+    border-radius: 20px;
+    background:rgb(74, 74, 253); 
+    position: relative;
 }
 .flicker{
-    cursor: pointer;
-    box-shadow: 1px 1px 10px black;
     width: 25px;
     height: 25px;
     background: whitesmoke;
+    border-radius: 50%;
     position: absolute;
     top: 5px;
     left: 5px;
-    border-radius: 50%;
+    box-shadow: -1px 1px 7px black;
+    cursor: pointer;
 }
 .flicker:active{
-    box-shadow: -1px 1px 10px black;
-    transform: translateX(30px);
+    transform: translateX(25px);
 }
-.right-nav{
-    display: flex;
-    align-items: center;
-}
-.login-form{
+.login-popup{
     z-index: 200;
-    opacity: 0;
+    /*  */
     visibility: hidden;
-    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: fade;
+    /*  */
+    background: whitesmoke;
+    width: 300px;
     position: absolute;
-    top: 49px;
-    right: 0px;
-    border-radius: 0 0 0px 40px;
-    transition: opacity 0.8s linear;
+    top: 55px;
+    right: 0;
+    border-radius: 0 0 0px 20px;
 }
-.login-form.active{
-    opacity: 1;
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.login-popup.active{
     visibility: visible;
+    opacity: 1;
 }
-.form , .form-element{
-    padding: 6px;
+.login-form,.login-form-elements{
+    padding: 10px;
 }
 #email,#pass{
-    border: none;
-    border-radius: 2px;
     width: 100%;
-    padding-bottom: 6px;
+    border-radius: 2px;
+    border: none;
     outline: none;
-    caret-color: rgb(39, 136, 255);
+    padding: 6px;
 }
-.form-element ::placeholder{
+.login-form-elements ::placeholder{
     text-align: right;
-    font-size: small;
 }
-.form-element a{
-    float: right;
-    padding: 10px 0px;
-    color: rgb(39, 136, 255);
-    text-decoration: none;
-}
-.form-element label{
-    font-size: 20px;
-    color: whitesmoke;
-}
-.form-element button{
+.login-form-elements button{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60px;
-    padding: 5px;
-    border: none;
-    outline: none;
-    background: rgb(39, 136, 255);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
 }
-.form i, .search-form i{
-    cursor: pointer !important;
-    color: black;
+.login-form-elements a{
+   display: flex;
+   justify-content: flex-end;
+   color: rgb(74, 74, 253);
+   text-decoration: none;
+}
+.login-form i{
+    position: absolute;
     font-size: 20px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-.search-form i{
-    right: 0px !important;
-    top: 0px !important;
-}
-.opacity{
-    visibility:hidden;
-    height: 100vh;
-    width: 100%;
-    background: rgba(0,0,0,0.45);
-}
-.opacity.show{
-    visibility:visible;
-}
-.search-form{
-    visibility:hidden;
-    opacity: 0;
-    transition: opacity 0.8s linear;
-    right: 60px;
-    top: 49px;
-    background: rgba(0,0,0,0.8);
-    z-index: 400;
-    position: absolute;
-    padding: 10px;
-    border-radius: 0 0 16px 16px;
-}
-.search-form.active{
-    opacity: 1;
-    visibility: visible;
-}
-.search-form h2{
-    text-transform: capitalize;
-    color: whitesmoke;
-    opacity: 0.6;
-}
-.search-items p{
+    background: rgb(74, 74, 253);
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     color: whitesmoke;
-    opacity: 1;
-    padding: 5px;
-    border-bottom: 1px solid gray;
-    margin-inline: 5px;
+    border-radius: 50%;
+    padding: 1px;
 }
-.search-items p:hover{
-    background: whitesmoke;
-    color: blue;
-}
-.search-items p:last-child{
-    margin-bottom: 5px;
+.overlay.show{
+    background: rgba(0,0,0,0.45);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
 }
