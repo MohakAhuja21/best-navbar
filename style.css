@@ -29,7 +29,7 @@
 .item a:hover{
     opacity: 1;
 }
-#search{
+#search-box{
     margin-inline: 15px;
     border: none;
     outline: none;
@@ -41,7 +41,7 @@
     color: whitesmoke;
     transition: all 350ms;
 }
-#search:focus{
+#search-box:focus{
     width: 200px;
     border-bottom: 1px solid rgb(74, 74, 253);
 }
@@ -166,4 +166,8 @@
 }
 .search-items{
     margin-inline: 10px;
+}
+.search-items a{
+    color: rgb(74, 74, 253);
+    text-decoration: none;
 }
