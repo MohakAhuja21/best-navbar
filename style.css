@@ -148,3 +148,22 @@
     height: 100vh;
     position: fixed;
 }
+/*  */
+#search-listItems{
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    z-index: 250;
+    background: whitesmoke;
+    width:100%;
+    max-width: 370px;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+}
+.search-items p{
+    border-bottom: 1px solid gray;
+    margin-bottom: 6px;
+}
+.search-items{
+    margin-inline: 10px;
+}
