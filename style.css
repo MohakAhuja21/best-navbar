@@ -190,6 +190,7 @@
         transition: all 1000ms ease;
     }
     .navbar.active{
+        background: rgba(0,0,0,0.9);
         height: 100vh;
     }
     .left-nav{
