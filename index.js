@@ -59,3 +59,11 @@ const search = () => {
     }
   }
 };
+
+// mobile nav
+const navConatiner = document.querySelector(".navbar");
+const mobileNav=document.querySelector('.menu-icon-container');
+
+mobileNav.addEventListener('click',()=>{
+  navConatiner.classList.toggle('active');
+})
