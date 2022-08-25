@@ -173,66 +173,64 @@
 }
 
 /* mobile nav */
-.mobile-nav{
+.mobile-navbar{
     display: none;
 }
-
-@media screen and (max-width:745px){
+@media screen and (max-width:720px){
     .navbar{
         flex-direction: column;
         width: 100%;
-        overflow: hidden;
-        justify-content: start;
-        z-index: -1;
-        padding: 20px 0px;
-        /* changing the height later */
         height: 0vh;
-        transition: all 1000ms ease;
+        padding: 20px 0px;
+        overflow: hidden;
+        transition: all 1100ms ease;
     }
     .navbar.active{
-        background: rgba(0,0,0,0.9);
+        background: rgba(0,0,0,0.93);
         height: 100vh;
     }
+    .right-nav{
+        display: none;
+    }
     .left-nav{
-        width:100%;
+        width: 100%;
         flex-direction: column;
         display: block;
-        margin-left: 0;
-        margin-right: auto;
-        margin-top: 120px;
+        margin: 200px 0px;
     }
     .left-nav li a{
-        display: inline-block;
-        padding: 20px 0;
-       border-bottom: 1px solid gray;
-       width: 100%;
-    }
-    .mobile-nav{
-        display: flex;
-        justify-content:space-between;
         width: 100%;
-        list-style: none;
-        /* align-items: center; */
+        border-bottom: 1px solid gray;
+        font-size: 22px;
+        display: inline-block;
+        padding: 20px 0px;
     }
-    .mobile-nav li{
-        margin-top: -10px;
-        color: whitesmoke;
-    }
-    .menu-icon-container{
-        width: 20px;
-        height: 30px;
+    .mobile-navbar{
+        margin: -17px 0px;
         display: flex;
         align-items: center;
-        cursor: pointer;
-    }
-    .menu-icon{
-        position: relative;
+        justify-content: space-between;
         width: 100%;
     }
+    .mobile-navbar li{
+        font-size: 20px;
+        list-style-type: none;
+        color: whitesmoke;
+        opacity: 0.9;
+    }
+    .menu-icon-container{
+        width: 40px;
+        height: 30px;
+    }
+    .menu-icon{
+        top: 15px;
+        width: 100%;
+        position: relative;
+    }
     .menu-icon .line-1, .menu-icon .line-2{
+        background: whitesmoke;
         position: absolute;
         height: 1px;
-        background: white;
         width: 100%;
     }
     .menu-icon .line-1{
@@ -240,23 +238,5 @@
     }
     .menu-icon .line-2{
         top: 4px;
-    }
-    .navbar.active .menu-icon-container .menu-icon .line-1{
-        top: 0;
-        transform: rotateZ(45deg);
-    }
-    .navbar.active .menu-icon-container .menu-icon .line-2{
-        top: 0;
-        transform: rotateZ(-45deg);
-    }
-
-
-
-
-
-
-
-    .right-nav{
-        display: none;
     }
 }

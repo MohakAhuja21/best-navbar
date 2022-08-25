@@ -61,9 +61,8 @@ const search = () => {
 };
 
 // mobile nav
-const navConatiner = document.querySelector(".navbar");
-const mobileNav=document.querySelector('.menu-icon-container');
+const navbarElement=document.querySelector('.navbar');
 
-mobileNav.addEventListener('click',()=>{
-  navConatiner.classList.toggle('active');
+navbarElement.addEventListener('click',()=>{
+  navbarElement.classList.toggle('active');
 })

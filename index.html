@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>navbar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- BOX-ICON CDN -->
-<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="navbar" id="navbar">
 
-        <ul class="mobile-nav">
-            <li>
-                <div class="menu-icon-container">
-                    <div class="menu-icon">
-                        <span class="line-1">
-                        <span class="line-2"></span>
-                        </span>
-                    </div>
-                </div>
-            </li>
-            <li>
-                home
-            </li>
-            <li>
-                login
-            </li>
-        </ul>
-
-
-
-
-        <ul class="left-nav">
-            <li class="item"><a href="#">home</a></li>
-            <li class="item"><a href="#">about</a></li>
-            <li class="item"><a href="#">services</a></li>
-            <li class="item"><a href="#">contact</a></li>
-        </ul>
-        <div class="right-nav">
-            <!--  -->
-            <div class="switch">
-                <div class="flicker"></div>
-            </div>
-            <!--  -->
-            <input type="text" id="search-box" placeholder="search website" onkeyup="search()">
-            <button class="login-btn">login</button>
+      <!-- mobile navbar code starts here.... -->
+      <div class="mobile-navbar">
+        <div class="menu-icon-container">
+          <div class="menu-icon">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+          </div>
         </div>
+        <li>home</li>
+        <li>login</li>
+      </div>
+
+      <ul class="left-nav">
+        <li class="item"><a href="#">home</a></li>
+        <li class="item"><a href="#">about</a></li>
+        <li class="item"><a href="#">services</a></li>
+        <li class="item"><a href="#">contact</a></li>
+      </ul>
+      <div class="right-nav">
+        <!--  -->
+        <div class="switch">
+          <div class="flicker"></div>
+        </div>
+        <!--  -->
+        <input
+          type="text"
+          id="search-box"
+          placeholder="search website"
+          onkeyup="search()"
+        />
+        <button class="login-btn">login</button>
+      </div>
     </div>
     <!-- login-popup form -->
     <div class="login-popup">
-        <div class="login-form">
-            <i class='bx bx-x'></i>
-            <div class="login-form-elements">
-                <label>email</label>
-                <input type="email" id="email" placeholder="@">
-            </div>
-            <div class="login-form-elements">
-                <label>password</label>
-                <input type="password" id="pass">
-            </div>
-            <div class="login-form-elements">
-                <button class="login-btn">login</button>
-            </div>
-            <div class="login-form-elements">
-                <a href="#">forget password ?</a>
-            </div>
+      <div class="login-form">
+        <i class="bx bx-x"></i>
+        <div class="login-form-elements">
+          <label>email</label>
+          <input type="email" id="email" placeholder="@" />
         </div>
+        <div class="login-form-elements">
+          <label>password</label>
+          <input type="password" id="pass" />
+        </div>
+        <div class="login-form-elements">
+          <button class="login-btn">login</button>
+        </div>
+        <div class="login-form-elements">
+          <a href="#">forget password ?</a>
+        </div>
+      </div>
     </div>
     <!-- search bar popup -->
     <div id="search-listItems">
-        <div class="search-items">
-            <a href="#"><p>how to center a div</p></a>
-        </div>
-        <div class="search-items">
-            <a href="#"><p>what is async function in js</p></a>
-        </div>
-        <div class="search-items">
-            <a href="#"><p>how much time it takes to learn react ?</p></a>
-        </div>
-        <div class="search-items">
-            <a href="#"><p>how much time it takes to learn sql ?</p></a>
-        </div>
-        <div class="search-items">
-            <a href="#"><p>how much time it takes to learn javascript ?</p></a>
-        </div>
-        <div class="search-items">
-           <a href="#"><p>can we learn to code in a month ?</p></a>
-        </div>
+      <div class="search-items">
+        <a href="#"><p>how to center a div</p></a>
+      </div>
+      <div class="search-items">
+        <a href="#"><p>what is async function in js</p></a>
+      </div>
+      <div class="search-items">
+        <a href="#"><p>how much time it takes to learn react ?</p></a>
+      </div>
+      <div class="search-items">
+        <a href="#"><p>how much time it takes to learn sql ?</p></a>
+      </div>
+      <div class="search-items">
+        <a href="#"><p>how much time it takes to learn javascript ?</p></a>
+      </div>
+      <div class="search-items">
+        <a href="#"><p>can we learn to code in a month ?</p></a>
+      </div>
     </div>
     <!-- overlay -->
     <div class="overlay"></div>
-</body>
-<script src="index.js"></script>
+  </body>
+  <script src="index.js"></script>
 </html>
